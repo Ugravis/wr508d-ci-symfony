@@ -28,7 +28,7 @@ final class PriceCalculator
 
         $shipping = $subtotal >= 50.0 ? 0.0 : 5.00;
 
-        $total = $subtotal - ($subtotal * $discount) - $shipping;
+        $total = $subtotal - ($subtotal * $discount) + $shipping;
 
         return [$total, $discount, $shipping];
     }
